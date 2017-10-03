@@ -1,0 +1,36 @@
+{
+  "name": "project-seed",
+  "version": "0.1.0",
+  "description": "Boilerplate for web projects",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"tsc -w\" \"webpack-dev-server --config ./.config/webpack.dev.js --progress --colors --open\"",
+    "build": "rm -rf .dist && tsc && webpack --config ./.config/webpack.prod.js --progress --colors",
+    "serve": "http-server .dist -o"
+  },
+  "repository": "git@github.com:dulowski-marek/project-seed.git",
+  "author": "Marek Dulowski <dulowski.marek@gmail.com>",
+  "license": "MIT",
+  "browserlist": "last 2 versions",
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "babel-minify-webpack-plugin": "^0.2.0",
+    "concurrently": "^3.5.0",
+    "css-loader": "^0.28.7",
+    "cssnano": "^3.10.0",
+    "extract-text-webpack-plugin": "^3.0.1",
+    "html-loader": "^0.5.1",
+    "html-webpack-plugin": "^2.30.1",
+    "http-server": "^0.10.0",
+    "node-sass": "^4.5.3",
+    "postcss-loader": "^2.0.6",
+    "preload-webpack-plugin": "^2.0.0",
+    "sass-loader": "^6.0.6",
+    "source-map-loader": "^0.2.2",
+    "style-loader": "^0.18.2",
+    "typescript": "^2.5.3",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
+  },
+  "dependencies": {}
+}
